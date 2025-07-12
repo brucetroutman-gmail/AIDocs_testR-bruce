@@ -1,1 +1,1 @@
-Read.me
+--- This app is for processing AI actions with Scoring ---
