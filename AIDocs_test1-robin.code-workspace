@@ -1,7 +1,11 @@
 {
     "folders": [
         {
-            "name": "AIDocs4u-Testing-App",
+            "name": "._",
+            "path": "../._"
+        },
+        {
+            "name": "AIDocs_test1-robin",
             "path": "."
         }
     ],

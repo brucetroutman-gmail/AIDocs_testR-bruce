@@ -28,7 +28,7 @@
      export DRYRUN="0"                          # .(50506.03.7 RAM Add DRYRUN)
      export SCORING="1"                         # .(50507.02.8 RAM Run scoring after models are run)
 
-     export PC_CODE=""
+     export PC_CODE="c0md6r"
 
      export SEARCH_MODEL="qwen2:0.5b"           # .(50514.01.2 RAM Override models)
      export SCORING_MODEL="gemma2:2b-instruct-q4_0" # .(50514.01.2)
