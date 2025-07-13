@@ -465,7 +465,7 @@ async function  evaluateResponse( modelName, userPrompt, systemPrompt, response,
   function  getScores( evaluation, pFields ) {                                          // .(50531.02.12 RAM Add pFields)
          // Parse and reformat scores
 //     var  scoreRegex = /\*\*(\w+\s*\w*)\*\*: (\d+)(?:\s*\/\s*10)?/g;                  //#.(50510.04.8)
-       var  scoreRegex = /\*\*(\w+\s*\w*)\*\*:\s*(\d+)(?:\s*\/\s*\d+)?/g;               // .(50510.04.8 CAI new RegExp to match 10/10)
+       var  scoreRegex = /\*\*(\w+(?:\s+\w+)*)\*\*:\s*(\d+)(?:\s*\/\s*\d+)?/g;               //byQ .(50510.04.8 CAI new RegExp to match 10/10)
        let  totalScore = 0;
        let  scoreCount = 0;
        let  formattedEvaluation = evaluation;
