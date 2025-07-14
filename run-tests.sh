@@ -30,7 +30,7 @@
 
      export PC_CODE="c0md6r"
 
-     export SEARCH_MODEL="qwen2:0.5b"           # .(50514.01.2 RAM Override models)
+#     export SEARCH_MODEL="llama3.2:3b"           # .(50514.01.2 RAM Override models)
      export SCORING_MODEL="gemma2:2b-instruct-q4_0" # .(50514.01.2)
 #    export SCORING_MODEL="gemma2:2b"           # .(50514.01.3)
 

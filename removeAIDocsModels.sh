@@ -11,16 +11,16 @@ check_ollama_installed() {
     fi
 }
 
-# Function to pull a model (whether it's already installed or not)
-pull_model() {
+# Function to remove a model (whether it's already installed or not)
+rm_model() {
     local model=$1
     
-    echo "🔄 Pulling model: $model"
-    ollama pull $model
+    echo "🔄 Removing model: $model"
+    ollama rm $model
     if [ $? -eq 0 ]; then
-        echo "✅ Successfully pulled/updated $model."
+        echo "✅ Successfully Removed $model."
     else
-        echo "❌ Failed to pull $model."
+        echo "❌ Failed to remove $model."
     fi
     echo "----------------------------------------"
 }
@@ -30,22 +30,30 @@ echo "==== Ollama Model Setup Script ===="
 echo "Checking if Ollama is installed..."
 check_ollama_installed
 
-echo "Pulling all required models (will update if already installed)..."
+echo "Removing all required models (will update if already installed)..."
 
-# List of models to pull
+# List of models to remov
 models=(
-    "qwen2:0.5b"
-    "qwen2:1.5b"
-    "gemma3:1b-it-q4_K_M"
+
+
+    "gemma2:2b"
+    "gemma2:2b-instruct-q4_0"
+    "gemma3:1b"
+    "gemma3:4b"
     "granite3.3:2b"
+    "granite3.3:8b"
+    "internlm2:latest"
     "llama3.2:3b"
-    "nomic-embed-text"
-    "phi4-mini:3.8b-q4_K_M"
+    "mistral:7b"
+    "mistral:7b-instruct"
+    "phi4-mini"
+    "llava"
+
 )
 
-# Pull each model
+# Remove each model
 for model in "${models[@]}"; do
-    pull_model "$model"
+    rm_model "$model"
 done
 
-echo "==== Model updates complete! ===="
+echo "==== Model Removals complete! ===="
