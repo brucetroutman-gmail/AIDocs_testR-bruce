@@ -37,7 +37,6 @@ models=(
 
 
     "gemma2:2b"
-    "gemma2:2b-instruct-q4_0"
     "gemma3:1b"
     "gemma3:4b"
     "granite3.3:2b"
