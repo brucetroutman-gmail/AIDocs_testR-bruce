@@ -167,14 +167,14 @@
 #*  --- --  --------------  =  ------------------------------------------------------  *#  
 
    if [ "${aCmd}" == "update" ]; then                                                   # .(50617.02.3 RAM Add update command Beg)
-      aDir="$( pwd )" # ..Repos/AIDocs_/test1-robin'
+      aDir="$( pwd )" # ..Repos/????AIDocs_/test1-robin'
       gitr update "$1"
       if [ "${OS:0:3}" != "Win" ]; then echo ""; fi; exit 
       fi                                                                                # .(50617.02.3 End 
 #*  --- --  --------------  =  ------------------------------------------------------  *#  
 
    if [ "${aCmd}" == "models"  ]; then                                                  # .(50617.03.3 RAM Add models command Beg              
-     if [ "$1" == "update"     ]; then echo "run updateAIDocsMmodels.sh";  
+     if [ "$1" == "update"     ]; then bash ./utilities/updateAIDocsMmodels.sh;  
      if [ "${OS:0:3}" != "Win" ]; then echo ""; fi; exit  
        fi    
              aModel="$1"; if [ "$1" == "" ]; then aModel="ollama"; fi  
